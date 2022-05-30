@@ -1,0 +1,59 @@
+version: '3.4'
+
+services:
+  ocelotapigateway:
+    image: ocelotapigateway:dev
+    container_name: OcelotApiGateway
+    build:
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "OcelotApiGateway"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - NUGET_PACKAGES=C:\.nuget\packages
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+      - NUGET_FALLBACK_PACKAGES=
+    volumes:
+      - C:\Users\thinksysuser\source\repos\WebApplication1\OcelotApiGateway:C:\app
+      - C:\Users\thinksysuser\source\repos\WebApplication1:C:\src
+      - C:\Users\thinksysuser\onecoremsvsmon\16.11.1197.0:C:\remote_debugger:ro
+      - C:\Users\thinksysuser\.nuget\packages\:c:\.nuget\packages:ro
+      - ${APPDATA}/ASP.NET/Https:C:\Users\ContainerUser\AppData\Roaming\ASP.NET\Https:ro
+      - ${APPDATA}/Microsoft/UserSecrets:C:\Users\ContainerUser\AppData\Roaming\Microsoft\UserSecrets:ro
+
+    entrypoint: C:\\remote_debugger\\x64\\msvsmon.exe /noauth /anyuser /silent /nostatus /noclrwarn /nosecuritywarn /nofirewallwarn /nowowwarn /timeout:2147483646 /LogDebuggeeOutputToStdOut
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "\"C:\\Program Files\\dotnet\\dotnet.exe\""
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath c:\\.nuget\\packages  \"C:\\app\\bin\\Debug\\netcoreapp3.1\\OcelotApiGateway.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "C:\\app"
+      com.microsoft.visualstudio.debuggee.killprogram: "C:\\remote_debugger\\x64\\utils\\KillProcess.exe dotnet.exe"
+
+  webapplication1:
+    image: webapplication1:dev
+    container_name: WebApplication1
+    build:
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "WebApplication1"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - NUGET_PACKAGES=C:\.nuget\packages
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+      - NUGET_FALLBACK_PACKAGES=
+    volumes:
+      - C:\Users\thinksysuser\source\repos\WebApplication1\WebApplication1:C:\app
+      - C:\Users\thinksysuser\source\repos\WebApplication1:C:\src
+      - C:\Users\thinksysuser\onecoremsvsmon\16.11.1197.0:C:\remote_debugger:ro
+      - C:\Users\thinksysuser\.nuget\packages\:c:\.nuget\packages:ro
+      - ${APPDATA}/ASP.NET/Https:C:\Users\ContainerUser\AppData\Roaming\ASP.NET\Https:ro
+      - ${APPDATA}/Microsoft/UserSecrets:C:\Users\ContainerUser\AppData\Roaming\Microsoft\UserSecrets:ro
+
+    entrypoint: C:\\remote_debugger\\x64\\msvsmon.exe /noauth /anyuser /silent /nostatus /noclrwarn /nosecuritywarn /nofirewallwarn /nowowwarn /timeout:2147483646 /LogDebuggeeOutputToStdOut
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "\"C:\\Program Files\\dotnet\\dotnet.exe\""
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath c:\\.nuget\\packages  \"C:\\app\\bin\\Debug\\netcoreapp3.1\\WebApplication1.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "C:\\app"
+      com.microsoft.visualstudio.debuggee.killprogram: "C:\\remote_debugger\\x64\\utils\\KillProcess.exe dotnet.exe"
+
