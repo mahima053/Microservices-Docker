@@ -31,6 +31,10 @@ namespace OcelotApiGateway
                 app.UseDeveloperExceptionPage();
             }
             app.UseRouting();
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
             app.UseOcelot();
                  
         }

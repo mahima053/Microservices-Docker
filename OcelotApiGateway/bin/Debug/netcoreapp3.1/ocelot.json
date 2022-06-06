@@ -1,7 +1,7 @@
 {
     "Routes": [
         {
-            "DownstreamPathTemplate": "/api/customer/{everything}",
+            "DownstreamPathTemplate": "/api/customer",
             "DownstreamScheme": "http",
             "DownstreamHostAndPorts": [
                 {
@@ -9,7 +9,7 @@
                     "Port": 5000
                 }
             ],
-            "UpstreamPathTemplate": "/api/customer/{everything}",
+            "UpstreamPathTemplate": "/api/customer",
             "UpstreamHttpMethod": [ "GET"]
         }
     ],

@@ -21,8 +21,8 @@ namespace WebApplication1
             var serviceProvider = CreateServices();
             using (var scope = serviceProvider.CreateScope())
             {
-                UpdateDatabase(scope.ServiceProvider);
-            }
+               UpdateDatabase(scope.ServiceProvider);
+           }
         }
 
         private static void UpdateDatabase(IServiceProvider serviceProvider)
@@ -36,7 +36,7 @@ namespace WebApplication1
             {
                 Console.WriteLine(e.Message + "NOT FOUND");
             }
-        }
+        } 
 
         private static IServiceProvider CreateServices()
         {
@@ -49,7 +49,7 @@ namespace WebApplication1
                            .ScanIn(typeof(Program).Assembly).For.Migrations())
                 .AddLogging(lb => lb.AddFluentMigratorConsole());
                 
-        }
+        } 
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)

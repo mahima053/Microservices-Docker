@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
-
+using FluentMigrator.Runner;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -31,18 +31,18 @@ namespace WebApplication1
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDbContextPool<CustomerContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Server=localhost;Database=CustomerDb;User=sa;Password=Your_password123;")));
+            services.AddDbContext<CustomerContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Server=localhost;Database=CustomerDb;User=sa;Password=Your_password123")));
 
             services.AddScoped<ICustomerRepository, CustomerRepository>();
             services.AddMediatR(Assembly.GetExecutingAssembly());
 
 
-         /*   services.AddFluentMigratorCore()
+        /*    services.AddFluentMigratorCore()
                 .ConfigureRunner(config =>
                 config.AddSqlServer()
-                .WithGlobalConnectionString("Server=localhost;Database=CustomerDb;User=sa;Password=Your_password123;")
+                .WithGlobalConnectionString("Server=localhost;Database=CustomerDb;User=sa;Password=Your_password123")
                             .ScanIn(Assembly.GetExecutingAssembly()).For.All())
-                .AddLogging(config => config.AddFluentMigratorConsole()); */
+                .AddLogging(config => config.AddFluentMigratorConsole());  */
 
         }
 
@@ -66,7 +66,7 @@ namespace WebApplication1
             });
         /*    using var scope = app.ApplicationServices.CreateScope();
             var migrator = scope.ServiceProvider.GetService<IMigrationRunner>();
-            migrator.MigrateUp(); */
+            migrator.MigrateUp();  */
 
         }
     }
