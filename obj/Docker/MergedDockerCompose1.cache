@@ -1,37 +1,92 @@
 services:
+  db:
+    container_name: db
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: Developer
+      SA_PASSWORD: Your_password123
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    ports:
+    - published: 1433
+      target: 1433
   ocelotapigateway:
     build:
       context: C:\Users\thinksysuser\source\repos\WebApplication1
-      dockerfile: OcelotApiGateway\Dockerfile
+      dockerfile: OcelotApiGateway/Dockerfile
       labels:
         com.microsoft.created-by: visual-studio
         com.microsoft.visual-studio.project-name: OcelotApiGateway
       target: base
-    container_name: OcelotApiGateway
-    entrypoint: C:\\remote_debugger\\x64\\msvsmon.exe /noauth /anyuser /silent /nostatus
-      /noclrwarn /nosecuritywarn /nofirewallwarn /nowowwarn /timeout:2147483646 /LogDebuggeeOutputToStdOut
+    container_name: gateway
+    depends_on:
+      db:
+        condition: service_started
+    entrypoint: tail -f /dev/null
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
       ASPNETCORE_URLS: https://+:443;http://+:80
       DOTNET_USE_POLLING_FILE_WATCHER: '1'
       NUGET_FALLBACK_PACKAGES: ''
-      NUGET_PACKAGES: C:\.nuget\packages
     image: ocelotapigateway:dev
     labels:
-      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath c:\.nuget\packages  "C:\app\bin\Debug\netcoreapp3.1\OcelotApiGateway.dll"'
-      com.microsoft.visualstudio.debuggee.killprogram: C:\remote_debugger\x64\utils\KillProcess.exe
-        dotnet.exe
-      com.microsoft.visualstudio.debuggee.program: '"C:\Program Files\dotnet\dotnet.exe"'
-      com.microsoft.visualstudio.debuggee.workingdirectory: C:\app
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/netcoreapp3.1/OcelotApiGateway.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
     ports:
     - target: 80
     - target: 443
+    - published: 3000
+      target: 3000
+    tty: true
     volumes:
-    - C:\Users\thinksysuser\AppData\Roaming\ASP.NET\Https:C:\Users\ContainerUser\AppData\Roaming\ASP.NET\Https:ro
-    - C:\Users\thinksysuser\AppData\Roaming\Microsoft\UserSecrets:C:\Users\ContainerUser\AppData\Roaming\Microsoft\UserSecrets:ro
-    - C:\Users\thinksysuser\source\repos\WebApplication1\OcelotApiGateway:C:\app:rw
-    - C:\Users\thinksysuser\onecoremsvsmon\16.11.1197.0:C:\remote_debugger:ro
-    - C:\Users\thinksysuser\source\repos\WebApplication1:C:\src:rw
-    - C:\Users\thinksysuser\.nuget\packages:c:\.nuget\packages:ro
+    - C:\Users\thinksysuser\source\repos\WebApplication1\OcelotApiGateway:/app:rw
+    - C:\Users\thinksysuser\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\thinksysuser\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\thinksysuser\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Users\thinksysuser\.nuget\packages:/root/.nuget/packages:ro
+    - C:\Users\thinksysuser\source\repos\WebApplication1:/src:rw
+  webapplication1:
+    build:
+      context: C:\Users\thinksysuser\source\repos\WebApplication1
+      dockerfile: WebApplication1/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: WebApplication1
+      target: base
+    container_name: customer
+    depends_on:
+      db:
+        condition: service_started
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      ASPNETCORE_URLS: https://+:443;http://+:80
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: ''
+    image: webapplication1:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/netcoreapp3.1/WebApplication1.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - target: 80
+    - target: 443
+    - published: 5000
+      target: 5000
+    tty: true
+    volumes:
+    - C:\Users\thinksysuser\source\repos\WebApplication1\WebApplication1:/app:rw
+    - C:\Users\thinksysuser\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\thinksysuser\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\thinksysuser\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Users\thinksysuser\.nuget\packages:/root/.nuget/packages:ro
+    - C:\Users\thinksysuser\source\repos\WebApplication1:/src:rw
 version: '3.4'
+volumes:
+  volume: {}

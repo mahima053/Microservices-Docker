@@ -28,7 +28,6 @@ namespace WebApplication1
             return await _customerContext.Customers.ToListAsync();
 
         }
-
     
     }
 }

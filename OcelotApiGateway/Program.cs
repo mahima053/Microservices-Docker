@@ -25,6 +25,7 @@ namespace OcelotApiGateway
             .ConfigureAppConfiguration((context, config) =>
             {
                 config.AddJsonFile("ocelot.json");
+            
             });
     }
 }

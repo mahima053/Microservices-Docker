@@ -1,15 +1,37 @@
 version: '3.4'
+volumes:
+  volume:
 
 services:
   ocelotapigateway:
     image: ${DOCKER_REGISTRY-}ocelotapigateway
     build:
       context: .
-      dockerfile: OcelotApiGateway\Dockerfile
+      dockerfile: OcelotApiGateway/Dockerfile
+    container_name: gateway
+
+    ports:
+      - 3000:3000
+    depends_on:
+        - db
 
   webapplication1:
-    image: ${DOCKER_REGISTRY-}webapplication1
-    build:
+     build:
       context: .
-      dockerfile: WebApplication1\Dockerfile
+      dockerfile: WebApplication1/Dockerfile
+     container_name: customer  
+     ports:
+        - 5000:5000 
+     depends_on:
+        - db
 
+  db:
+    image: "mcr.microsoft.com/mssql/server:2019-latest"
+    environment:
+         SA_PASSWORD: "Your_password123"
+         ACCEPT_EULA: "Y"
+         MSSQL_PID: "Developer"
+    ports:
+        - 1433:1433
+    container_name: db
+   

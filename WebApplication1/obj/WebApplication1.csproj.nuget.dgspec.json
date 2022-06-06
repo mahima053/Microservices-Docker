@@ -42,19 +42,15 @@
           "dependencies": {
             "FluentMigrator": {
               "target": "Package",
-              "version": "[3.3.2, )"
-            },
-            "FluentMigrator.Extensions.SqlServer": {
-              "target": "Package",
-              "version": "[3.3.2, )"
+              "version": "[3.2.9, )"
             },
             "FluentMigrator.Runner": {
               "target": "Package",
-              "version": "[3.3.2, )"
+              "version": "[3.2.9, )"
             },
             "FluentMigrator.Runner.SqlServer": {
               "target": "Package",
-              "version": "[3.3.2, )"
+              "version": "[3.2.9, )"
             },
             "MediatR": {
               "target": "Package",
