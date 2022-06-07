@@ -17,12 +17,14 @@ namespace WebApplication1
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+           
             var serviceProvider = CreateServices();
             using (var scope = serviceProvider.CreateScope())
             {
                UpdateDatabase(scope.ServiceProvider);
+
            }
+            CreateHostBuilder(args).Build().Run();
         }
 
         private static void UpdateDatabase(IServiceProvider serviceProvider)
@@ -40,14 +42,15 @@ namespace WebApplication1
 
         private static IServiceProvider CreateServices()
         {
-            return (IServiceProvider)new ServiceCollection()
-           
+            return new ServiceCollection()
+
                 .AddFluentMigratorCore()
                 .ConfigureRunner(config =>
                 config.AddSqlServer()
-                .WithGlobalConnectionString("Server=localhost;Database=CustomerDb;User=sa;Password=Your_password123;")
+                .WithGlobalConnectionString("Server=db;Database=CustomerDb;User=sa;Password=Your_password123;")
                            .ScanIn(typeof(Program).Assembly).For.Migrations())
-                .AddLogging(lb => lb.AddFluentMigratorConsole());
+                .AddLogging(lb => lb.AddFluentMigratorConsole())
+                .BuildServiceProvider(false);
                 
         } 
 
@@ -56,6 +59,7 @@ namespace WebApplication1
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+                    webBuilder.UseKestrel();
                 });
     }
 }

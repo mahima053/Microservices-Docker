@@ -19,7 +19,7 @@ namespace WebApplication1.Controllers
 
 
         [HttpGet]
-        [Route("customer")]
+        
         public async Task<IEnumerable<Customer>> GetCustomer() => await _mediator.Send(new GetCustomerRequest());
 
         [HttpPost]

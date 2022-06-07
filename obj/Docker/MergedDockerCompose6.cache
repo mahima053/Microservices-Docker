@@ -22,9 +22,9 @@ services:
       ASPNETCORE_URLS: https://+:443;http://+:80
     image: ocelotapigateway
     ports:
-    - published: 5000
-      target: 80
     - target: 80
+    - published: 5000
+      target: 443
     - target: 443
     volumes:
     - C:\Users\thinksysuser\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
@@ -41,10 +41,12 @@ services:
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_URLS: https://+:443;http://+:80
     ports:
-    - target: 80
-    - target: 443
     - published: 5000
-      target: 5000
+      target: 80
+    - target: 80
+    - published: 5000
+      target: 443
+    - target: 443
     volumes:
     - C:\Users\thinksysuser\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
     - C:\Users\thinksysuser\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro

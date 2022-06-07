@@ -36,9 +36,9 @@ services:
       com.microsoft.visualstudio.debuggee.program: dotnet
       com.microsoft.visualstudio.debuggee.workingdirectory: /app
     ports:
-    - published: 5000
-      target: 80
     - target: 80
+    - published: 5000
+      target: 443
     - target: 443
     tty: true
     volumes:
@@ -75,10 +75,12 @@ services:
       com.microsoft.visualstudio.debuggee.program: dotnet
       com.microsoft.visualstudio.debuggee.workingdirectory: /app
     ports:
-    - target: 80
-    - target: 443
     - published: 5000
-      target: 5000
+      target: 80
+    - target: 80
+    - published: 5000
+      target: 443
+    - target: 443
     tty: true
     volumes:
     - C:\Users\thinksysuser\source\repos\WebApplication1\WebApplication1:/app:rw

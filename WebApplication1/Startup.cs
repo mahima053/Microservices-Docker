@@ -31,7 +31,9 @@ namespace WebApplication1
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDbContext<CustomerContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Server=localhost;Database=CustomerDb;User=sa;Password=Your_password123")));
+         //   services.AddDbContext<CustomerContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Server=db;Database=CustomerDb;User=sa;Password=Your_password123")));
+            services.AddDbContext<CustomerContext>((options) => options.UseSqlServer("Server=db;Database=CustomerDb;User=sa;Password=Your_password123;",
+                (builder) => builder.MigrationsAssembly(typeof(Startup).Assembly.ToString())));
 
             services.AddScoped<ICustomerRepository, CustomerRepository>();
             services.AddMediatR(Assembly.GetExecutingAssembly());
@@ -49,12 +51,12 @@ namespace WebApplication1
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if (env.IsDevelopment())
+         /*   if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-            }
+            } */
              
-           // app.UseHttpsRedirection();
+        //    app.UseHttpsRedirection();
 
             app.UseRouting();
 

@@ -36,10 +36,10 @@ services:
       com.microsoft.visualstudio.debuggee.program: dotnet
       com.microsoft.visualstudio.debuggee.workingdirectory: /app
     ports:
-    - published: 5000
-      target: 80
     - target: 80
     - target: 443
+    - published: 5000
+      target: 5000
     tty: true
     volumes:
     - C:\Users\thinksysuser\source\repos\WebApplication1\OcelotApiGateway:/app:rw
@@ -77,8 +77,8 @@ services:
     ports:
     - target: 80
     - target: 443
-    - published: 5000
-      target: 5000
+    - published: 5001
+      target: 5001
     tty: true
     volumes:
     - C:\Users\thinksysuser\source\repos\WebApplication1\WebApplication1:/app:rw
