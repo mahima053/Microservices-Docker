@@ -37,6 +37,25 @@ namespace WebApplication1.Controllers
             }
         }
  
+        [HttpGet("{id}")]
+        public async Task<Customer> GetCus(Guid id) => await _mediator.Send(new GetCusByIdRequest { Id = id });
+
+        [HttpPut("{Id}")]
+        public async Task<IActionResult> Update(Guid id, UpdateCustomerRequest request)
+        {
+            request.Id = id;
+            return Ok(await _mediator.Send(request));
+        }
+
+        [HttpDelete("{Id}")]
+
+        public async Task<ActionResult> DeleteCustomer(Guid id)
+        {
+            await _mediator.Send(new DeleteCustomerRequest { Id = id
+        });
+            return NoContent();
+}
+
 
     }
 }
