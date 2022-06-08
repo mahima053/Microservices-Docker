@@ -32,12 +32,11 @@ namespace WebApplication1
         {
             services.AddControllers();
          //   services.AddDbContext<CustomerContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Server=db;Database=CustomerDb;User=sa;Password=Your_password123")));
-            services.AddDbContext<CustomerContext>((options) => options.UseSqlServer("Server=db;Database=CustomerDb;User=sa;Password=Your_password123;",
+            services.AddDbContext<CustomerContext>((options) => options.UseSqlServer("Server=db;Database=CustomerDb;User=sa;Password=Your_password123",
                 (builder) => builder.MigrationsAssembly(typeof(Startup).Assembly.ToString())));
 
             services.AddScoped<ICustomerRepository, CustomerRepository>();
             services.AddMediatR(Assembly.GetExecutingAssembly());
-
 
         /*    services.AddFluentMigratorCore()
                 .ConfigureRunner(config =>

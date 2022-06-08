@@ -25,7 +25,7 @@ services:
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
-      ASPNETCORE_URLS: https://+:443;http://+:80
+      ASPNETCORE_URLS: http://+:5000
       DOTNET_USE_POLLING_FILE_WATCHER: '1'
       NUGET_FALLBACK_PACKAGES: ''
     image: ocelotapigateway:dev
@@ -37,13 +37,13 @@ services:
       com.microsoft.visualstudio.debuggee.workingdirectory: /app
     ports:
     - published: 5000
-      target: 80
-    - target: 80
-    - target: 443
+      target: 5000
+    - target: 5000
     tty: true
     volumes:
     - C:\Users\thinksysuser\source\repos\WebApplication1\OcelotApiGateway:/app:rw
     - C:\Users\thinksysuser\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\thinksysuser\AppData\Roaming\ASP.NET\Https:/root/.aspnet/http:ro
     - C:\Users\thinksysuser\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
     - C:\Users\thinksysuser\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
     - C:\Users\thinksysuser\.nuget\packages:/root/.nuget/packages:ro
@@ -64,7 +64,7 @@ services:
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
-      ASPNETCORE_URLS: https://+:443;http://+:80
+      ASPNETCORE_URLS: http://+:5001
       DOTNET_USE_POLLING_FILE_WATCHER: '1'
       NUGET_FALLBACK_PACKAGES: ''
     image: webapplication1:dev
@@ -75,14 +75,14 @@ services:
       com.microsoft.visualstudio.debuggee.program: dotnet
       com.microsoft.visualstudio.debuggee.workingdirectory: /app
     ports:
-    - target: 80
-    - target: 443
-    - published: 5000
-      target: 5000
+    - published: 5001
+      target: 5001
+    - target: 5001
     tty: true
     volumes:
     - C:\Users\thinksysuser\source\repos\WebApplication1\WebApplication1:/app:rw
     - C:\Users\thinksysuser\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\thinksysuser\AppData\Roaming\ASP.NET\Https:/root/.aspnet/http:ro
     - C:\Users\thinksysuser\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
     - C:\Users\thinksysuser\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
     - C:\Users\thinksysuser\.nuget\packages:/root/.nuget/packages:ro

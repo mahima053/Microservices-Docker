@@ -22,8 +22,7 @@ namespace WebApplication1
             using (var scope = serviceProvider.CreateScope())
             {
                UpdateDatabase(scope.ServiceProvider);
-
-           }
+            }
             CreateHostBuilder(args).Build().Run();
         }
 
@@ -47,7 +46,7 @@ namespace WebApplication1
                 .AddFluentMigratorCore()
                 .ConfigureRunner(config =>
                 config.AddSqlServer()
-                .WithGlobalConnectionString("Server=db;Database=CustomerDb;User=sa;Password=Your_password123;")
+                .WithGlobalConnectionString("Server=db;Database=CustomerDb;User=sa;Password=Your_password123")
                            .ScanIn(typeof(Program).Assembly).For.Migrations())
                 .AddLogging(lb => lb.AddFluentMigratorConsole())
                 .BuildServiceProvider(false);

@@ -19,17 +19,14 @@ services:
         condition: service_started
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-      ASPNETCORE_URLS: https://+:443;http://+:80
+      ASPNETCORE_URLS: http://+:5000
     image: ocelotapigateway
     ports:
     - published: 5000
       target: 80
-    - target: 80
-    - published: 5000
-      target: 443
-    - target: 443
+    - target: 5000
     volumes:
-    - C:\Users\thinksysuser\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\thinksysuser\AppData\Roaming\ASP.NET\Https:/root/.aspnet/http:ro
     - C:\Users\thinksysuser\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
   webapplication1:
     build:
@@ -41,16 +38,13 @@ services:
         condition: service_started
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-      ASPNETCORE_URLS: https://+:443;http://+:80
+      ASPNETCORE_URLS: http://+:5001
     ports:
-    - published: 5000
-      target: 80
-    - target: 80
-    - published: 5000
-      target: 443
-    - target: 443
+    - published: 5001
+      target: 5001
+    - target: 5001
     volumes:
-    - C:\Users\thinksysuser\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\thinksysuser\AppData\Roaming\ASP.NET\Https:/root/.aspnet/http:ro
     - C:\Users\thinksysuser\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
 version: '3.4'
 volumes:
