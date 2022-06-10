@@ -5,6 +5,7 @@ services:
       ACCEPT_EULA: "Y"
       MSSQL_PID: Developer
       SA_PASSWORD: Your_password123
+      User: sa
     image: mcr.microsoft.com/mssql/server:2019-latest
     ports:
     - published: 1433
