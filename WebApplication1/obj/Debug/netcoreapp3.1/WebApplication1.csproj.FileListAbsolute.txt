@@ -94,3 +94,5 @@ C:\Users\thinksysuser\source\repos\WebApplication1\WebApplication1\obj\Debug\net
 C:\Users\thinksysuser\source\repos\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\WebApplication1.pdb
 C:\Users\thinksysuser\source\repos\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\WebApplication1.genruntimeconfig.cache
 C:\Users\thinksysuser\source\repos\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\WebApplication1.csproj.AssemblyReference.cache
+C:\Users\thinksysuser\source\repos\WebApplication1\WebApplication1\bin\Debug\netcoreapp3.1\DotNetEnv.dll
+C:\Users\thinksysuser\source\repos\WebApplication1\WebApplication1\bin\Debug\netcoreapp3.1\Sprache.dll

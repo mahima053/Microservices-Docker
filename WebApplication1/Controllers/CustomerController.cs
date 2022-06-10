@@ -51,8 +51,7 @@ namespace WebApplication1.Controllers
 
         public async Task<ActionResult> DeleteCustomer(Guid id)
         {
-            await _mediator.Send(new DeleteCustomerRequest { Id = id
-        });
+            await _mediator.Send(new DeleteCustomerRequest { Id = id });
             return NoContent();
 }
 

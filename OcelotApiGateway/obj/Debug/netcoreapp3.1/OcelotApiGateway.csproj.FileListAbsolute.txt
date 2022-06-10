@@ -31,3 +31,5 @@ C:\Users\thinksysuser\source\repos\WebApplication1\OcelotApiGateway\obj\Debug\ne
 C:\Users\thinksysuser\source\repos\WebApplication1\OcelotApiGateway\obj\Debug\netcoreapp3.1\OcelotApiGateway.pdb
 C:\Users\thinksysuser\source\repos\WebApplication1\OcelotApiGateway\obj\Debug\netcoreapp3.1\OcelotApiGateway.genruntimeconfig.cache
 C:\Users\thinksysuser\source\repos\WebApplication1\OcelotApiGateway\obj\Debug\netcoreapp3.1\OcelotApiGateway.csproj.AssemblyReference.cache
+C:\Users\thinksysuser\source\repos\WebApplication1\OcelotApiGateway\bin\Debug\netcoreapp3.1\DotNetEnv.dll
+C:\Users\thinksysuser\source\repos\WebApplication1\OcelotApiGateway\bin\Debug\netcoreapp3.1\Sprache.dll

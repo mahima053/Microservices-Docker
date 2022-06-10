@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -57,6 +57,7 @@ namespace WebApplication1
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
+                    DotNetEnv.Env.Load();
                     webBuilder.UseStartup<Startup>();
                     webBuilder.UseKestrel();
                 });

@@ -5,6 +5,8 @@ services:
       ACCEPT_EULA: "Y"
       MSSQL_PID: Developer
       SA_PASSWORD: Your_password123
+      Server: db
+      User: sa
     image: mcr.microsoft.com/mssql/server:2019-latest
     ports:
     - published: 1433
@@ -23,7 +25,7 @@ services:
     image: ocelotapigateway
     ports:
     - published: 5000
-      target: 80
+      target: 5000
     - target: 5000
     volumes:
     - C:\Users\thinksysuser\AppData\Roaming\ASP.NET\Https:/root/.aspnet/http:ro

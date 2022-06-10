@@ -10,7 +10,7 @@
                 }
             ],
             "UpstreamPathTemplate": "/api/customer",
-            "UpstreamHttpMethod": [ "GET"],
+            "UpstreamHttpMethod": [ "GET" , "POST" , "PUT", "POST"],
             "“RateLimitOptions”": {
                 "“ClientWhitelist”": [],
                 "“EnableRateLimiting”": true,
@@ -19,7 +19,7 @@
                 "“Limit”": 1
             }
         }
-    ],
+    ], 
     "GlobalConfiguration": {
         "BaseUrl": "http://localhost:5000"
     }
