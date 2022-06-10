@@ -70,6 +70,9 @@ artifacts/
 # ASP.NET Scaffolding
 ScaffoldingReadMe.txt
 
+# Ignore files related to API keys
+.env
+
 # StyleCop
 StyleCopReport.xml
 

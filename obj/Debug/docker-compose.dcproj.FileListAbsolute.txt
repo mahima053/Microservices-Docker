@@ -64,5 +64,4 @@ C:\Users\thinksysuser\source\repos\WebApplication1\bin\Debug\de-DE\FluentMigrato
 C:\Users\thinksysuser\source\repos\WebApplication1\obj\Debug\docker-compose.dcproj.AssemblyReference.cache
 C:\Users\thinksysuser\source\repos\WebApplication1\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
 C:\Users\thinksysuser\source\repos\WebApplication1\obj\Debug\docker-compose.dcproj.CopyComplete
-C:\Users\thinksysuser\source\repos\WebApplication1\bin\Debug\DotNetEnv.dll
-C:\Users\thinksysuser\source\repos\WebApplication1\bin\Debug\Sprache.dll
+C:\Users\thinksysuser\source\repos\WebApplication1\bin\Debug\Microsoft.Extensions.Configuration.dll

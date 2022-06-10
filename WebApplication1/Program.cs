@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Threading.Tasks;
 using FluentMigrator.Runner;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using WebApplication1.DataContex;
 
 namespace WebApplication1
 {
@@ -17,6 +11,9 @@ namespace WebApplication1
     {
         public static void Main(string[] args)
         {
+          //  var root = Directory.GetCurrentDirectory();
+          //  var dotenv = Path.Combine(root, ".env");
+         //   DotEnv.Load(dotenv);
            
             var serviceProvider = CreateServices();
             using (var scope = serviceProvider.CreateScope())
@@ -46,7 +43,7 @@ namespace WebApplication1
                 .AddFluentMigratorCore()
                 .ConfigureRunner(config =>
                 config.AddSqlServer()
-                .WithGlobalConnectionString("Server=db;Database=CustomerDb;User=sa;Password=Your_password123")
+                .WithGlobalConnectionString(Environment.GetEnvironmentVariable("DATABASES__SQLSERVER__CONNECTIONSTRING"))
                            .ScanIn(typeof(Program).Assembly).For.Migrations())
                 .AddLogging(lb => lb.AddFluentMigratorConsole())
                 .BuildServiceProvider(false);
@@ -57,7 +54,12 @@ namespace WebApplication1
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    DotNetEnv.Env.Load();
+                    var config =
+                        new ConfigurationBuilder()
+                              .AddEnvironmentVariables()
+                               .Build();
+
+
                     webBuilder.UseStartup<Startup>();
                     webBuilder.UseKestrel();
                 });

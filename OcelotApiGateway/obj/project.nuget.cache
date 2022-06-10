@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "PSq9k6k/DPvHKvZXBhdMAW8VBvuezlbb++7/Zq5zEIN15xHCm2GEi1mp74UW910YAR6qrTnTvTAeTgUt6M/Ekg==",
+  "dgSpecHash": "vkPYzd796G1j+92BuiPdM7uTjCpWGvIl6XZQSW9oulbKlZpGNgk/lSekQikQEMZo8EPEaaYY25F+3OlDHFMfLw==",
   "success": true,
   "projectFilePath": "C:\\Users\\thinksysuser\\source\\repos\\WebApplication1\\OcelotApiGateway\\OcelotApiGateway.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\thinksysuser\\.nuget\\packages\\dotenv.net\\3.0.0\\dotenv.net.3.0.0.nupkg.sha512",
     "C:\\Users\\thinksysuser\\.nuget\\packages\\dotnetenv\\2.3.0\\dotnetenv.2.3.0.nupkg.sha512",
     "C:\\Users\\thinksysuser\\.nuget\\packages\\fluentvalidation\\8.6.2\\fluentvalidation.8.6.2.nupkg.sha512",
     "C:\\Users\\thinksysuser\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.1.3\\microsoft.aspnetcore.jsonpatch.3.1.3.nupkg.sha512",
@@ -57,6 +58,7 @@
     "C:\\Users\\thinksysuser\\.nuget\\packages\\system.io.filesystem.primitives\\4.3.0\\system.io.filesystem.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\thinksysuser\\.nuget\\packages\\system.linq\\4.3.0\\system.linq.4.3.0.nupkg.sha512",
     "C:\\Users\\thinksysuser\\.nuget\\packages\\system.linq.expressions\\4.3.0\\system.linq.expressions.4.3.0.nupkg.sha512",
+    "C:\\Users\\thinksysuser\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\thinksysuser\\.nuget\\packages\\system.net.http\\4.3.0\\system.net.http.4.3.0.nupkg.sha512",
     "C:\\Users\\thinksysuser\\.nuget\\packages\\system.net.primitives\\4.3.0\\system.net.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\thinksysuser\\.nuget\\packages\\system.net.sockets\\4.3.0\\system.net.sockets.4.3.0.nupkg.sha512",

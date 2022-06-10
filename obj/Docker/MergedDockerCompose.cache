@@ -3,6 +3,7 @@ services:
     container_name: db
     environment:
       ACCEPT_EULA: "Y"
+      DATABASES__SQLSERVER__CONNECTIONSTRING: Server=db;Database=CustomerDb;User=sa;Password=Your_password123
       MSSQL_PID: Developer
       SA_PASSWORD: Your_password123
       User: sa

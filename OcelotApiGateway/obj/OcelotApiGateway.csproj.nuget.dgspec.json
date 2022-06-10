@@ -51,6 +51,10 @@
             "Ocelot": {
               "target": "Package",
               "version": "[16.0.0, )"
+            },
+            "dotenv.net": {
+              "target": "Package",
+              "version": "[3.0.0, )"
             }
           },
           "imports": [

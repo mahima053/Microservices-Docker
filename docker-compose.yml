@@ -9,7 +9,8 @@ services:
       context: .
       dockerfile: OcelotApiGateway/Dockerfile
     container_name: gateway
-    
+    env_file:
+        - .env
     ports:
       - 5000:5000
     depends_on:
@@ -20,10 +21,13 @@ services:
       context: .
       dockerfile: WebApplication1/Dockerfile
      container_name: customer  
+     env_file:
+        - .env
      ports:
         - 5001:5001 
      depends_on:
         - db
+
 
   db:
     image: "mcr.microsoft.com/mssql/server:2019-latest"

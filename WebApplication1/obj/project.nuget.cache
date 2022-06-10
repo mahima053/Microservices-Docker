@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "kFEvgoQ11yJRhliTawJwUg1O/p5YhZoiuWV7w6Wk8fSoWSYcI+fiHjYmFoozWHt7/8aVHpF8EuRR/br4OWJHVg==",
+  "dgSpecHash": "+SyrpQQwNhBwD2bHGt4fcXW2xaKbtwc8VNbPYdlJ4nnZ93SHkrIY5Yp30SuAN+HcLZUwWRJBd+C1xLqF1SBfoQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\thinksysuser\\source\\repos\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\thinksysuser\\.nuget\\packages\\dotenv.net\\3.0.0\\dotenv.net.3.0.0.nupkg.sha512",
     "C:\\Users\\thinksysuser\\.nuget\\packages\\dotnetenv\\2.3.0\\dotnetenv.2.3.0.nupkg.sha512",
     "C:\\Users\\thinksysuser\\.nuget\\packages\\fluentmigrator\\3.2.9\\fluentmigrator.3.2.9.nupkg.sha512",
     "C:\\Users\\thinksysuser\\.nuget\\packages\\fluentmigrator.abstractions\\3.2.9\\fluentmigrator.abstractions.3.2.9.nupkg.sha512",
@@ -118,6 +119,7 @@
     "C:\\Users\\thinksysuser\\.nuget\\packages\\system.io.filesystem.primitives\\4.3.0\\system.io.filesystem.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\thinksysuser\\.nuget\\packages\\system.linq\\4.3.0\\system.linq.4.3.0.nupkg.sha512",
     "C:\\Users\\thinksysuser\\.nuget\\packages\\system.linq.expressions\\4.3.0\\system.linq.expressions.4.3.0.nupkg.sha512",
+    "C:\\Users\\thinksysuser\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\thinksysuser\\.nuget\\packages\\system.net.http\\4.3.0\\system.net.http.4.3.0.nupkg.sha512",
     "C:\\Users\\thinksysuser\\.nuget\\packages\\system.net.nameresolution\\4.3.0\\system.net.nameresolution.4.3.0.nupkg.sha512",
     "C:\\Users\\thinksysuser\\.nuget\\packages\\system.net.primitives\\4.3.0\\system.net.primitives.4.3.0.nupkg.sha512",
