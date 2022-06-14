@@ -20,13 +20,15 @@ namespace OcelotApiGateway
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-
+                    var env = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
                     webBuilder.UseStartup<Startup>();
-                })
-            .ConfigureAppConfiguration((context, config) =>
+                    webBuilder.ConfigureAppConfiguration(config =>
+           config.AddJsonFile($"ocelot.{env}.json"));
+                });
+         /*   .ConfigureAppConfiguration((context, config) =>
             {
-                config.AddJsonFile("ocelot.json", optional: false, reloadOnChange: true);
+                config.AddJsonFile("ocelot.Development.json", optional: false, reloadOnChange: true);
             
-            });
+            }); */
     }
 }
