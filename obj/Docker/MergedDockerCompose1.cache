@@ -25,11 +25,16 @@ services:
         condition: service_started
     entrypoint: tail -f /dev/null
     environment:
+      ACCEPT_EULA: "Y"
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
       ASPNETCORE_URLS: http://+:5000
+      DATABASES__SQLSERVER__CONNECTIONSTRING: Server=db;Database=CustomerDb;User=sa;Password=Your_password123
       DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      MSSQL_PID: Developer
       NUGET_FALLBACK_PACKAGES: ''
+      SA_PASSWORD: Your_password123
+      User: sa
     image: ocelotapigateway:dev
     labels:
       com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/netcoreapp3.1/OcelotApiGateway.dll"'
@@ -64,11 +69,16 @@ services:
         condition: service_started
     entrypoint: tail -f /dev/null
     environment:
+      ACCEPT_EULA: "Y"
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
       ASPNETCORE_URLS: http://+:5001
+      DATABASES__SQLSERVER__CONNECTIONSTRING: Server=db;Database=CustomerDb;User=sa;Password=Your_password123
       DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      MSSQL_PID: Developer
       NUGET_FALLBACK_PACKAGES: ''
+      SA_PASSWORD: Your_password123
+      User: sa
     image: webapplication1:dev
     labels:
       com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/netcoreapp3.1/WebApplication1.dll"'

@@ -7,7 +7,6 @@ C:\Users\thinksysuser\source\repos\WebApplication1\bin\Debug\WebApplication1.exe
 C:\Users\thinksysuser\source\repos\WebApplication1\bin\Debug\OcelotApiGateway.deps.json
 C:\Users\thinksysuser\source\repos\WebApplication1\bin\Debug\OcelotApiGateway.runtimeconfig.json
 C:\Users\thinksysuser\source\repos\WebApplication1\bin\Debug\OcelotApiGateway.runtimeconfig.dev.json
-C:\Users\thinksysuser\source\repos\WebApplication1\bin\Debug\ocelot.json
 C:\Users\thinksysuser\source\repos\WebApplication1\bin\Debug\OcelotApiGateway.exe
 C:\Users\thinksysuser\source\repos\WebApplication1\bin\Debug\OcelotApiGateway.dll
 C:\Users\thinksysuser\source\repos\WebApplication1\bin\Debug\WebApplication1.dll
@@ -65,3 +64,4 @@ C:\Users\thinksysuser\source\repos\WebApplication1\obj\Debug\docker-compose.dcpr
 C:\Users\thinksysuser\source\repos\WebApplication1\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
 C:\Users\thinksysuser\source\repos\WebApplication1\obj\Debug\docker-compose.dcproj.CopyComplete
 C:\Users\thinksysuser\source\repos\WebApplication1\bin\Debug\Microsoft.Extensions.Configuration.dll
+C:\Users\thinksysuser\source\repos\WebApplication1\bin\Debug\ocelot.json

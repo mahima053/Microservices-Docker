@@ -1,6 +1,5 @@
 C:\Users\thinksysuser\source\repos\WebApplication1\OcelotApiGateway\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\thinksysuser\source\repos\WebApplication1\OcelotApiGateway\bin\Debug\netcoreapp3.1\appsettings.json
-C:\Users\thinksysuser\source\repos\WebApplication1\OcelotApiGateway\bin\Debug\netcoreapp3.1\ocelot.json
 C:\Users\thinksysuser\source\repos\WebApplication1\OcelotApiGateway\bin\Debug\netcoreapp3.1\OcelotApiGateway.exe
 C:\Users\thinksysuser\source\repos\WebApplication1\OcelotApiGateway\bin\Debug\netcoreapp3.1\OcelotApiGateway.deps.json
 C:\Users\thinksysuser\source\repos\WebApplication1\OcelotApiGateway\bin\Debug\netcoreapp3.1\OcelotApiGateway.runtimeconfig.json
@@ -31,6 +30,4 @@ C:\Users\thinksysuser\source\repos\WebApplication1\OcelotApiGateway\obj\Debug\ne
 C:\Users\thinksysuser\source\repos\WebApplication1\OcelotApiGateway\obj\Debug\netcoreapp3.1\OcelotApiGateway.pdb
 C:\Users\thinksysuser\source\repos\WebApplication1\OcelotApiGateway\obj\Debug\netcoreapp3.1\OcelotApiGateway.genruntimeconfig.cache
 C:\Users\thinksysuser\source\repos\WebApplication1\OcelotApiGateway\obj\Debug\netcoreapp3.1\OcelotApiGateway.csproj.AssemblyReference.cache
-C:\Users\thinksysuser\source\repos\WebApplication1\OcelotApiGateway\bin\Debug\netcoreapp3.1\DotNetEnv.dll
-C:\Users\thinksysuser\source\repos\WebApplication1\OcelotApiGateway\bin\Debug\netcoreapp3.1\Sprache.dll
-C:\Users\thinksysuser\source\repos\WebApplication1\OcelotApiGateway\bin\Debug\netcoreapp3.1\dotenv.net.dll
+C:\Users\thinksysuser\source\repos\WebApplication1\OcelotApiGateway\bin\Debug\netcoreapp3.1\ocelot.json

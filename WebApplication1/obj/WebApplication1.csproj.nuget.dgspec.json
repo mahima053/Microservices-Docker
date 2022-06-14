@@ -40,10 +40,6 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
-            "DotNetEnv": {
-              "target": "Package",
-              "version": "[2.3.0, )"
-            },
             "FluentMigrator": {
               "target": "Package",
               "version": "[3.2.9, )"
@@ -85,10 +81,6 @@
             "Ocelot": {
               "target": "Package",
               "version": "[16.0.0, )"
-            },
-            "dotenv.net": {
-              "target": "Package",
-              "version": "[3.0.0, )"
             }
           },
           "imports": [

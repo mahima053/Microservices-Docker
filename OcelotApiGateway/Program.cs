@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -20,11 +20,12 @@ namespace OcelotApiGateway
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
+
                     webBuilder.UseStartup<Startup>();
                 })
             .ConfigureAppConfiguration((context, config) =>
             {
-                config.AddJsonFile("ocelot.json");
+                config.AddJsonFile("ocelot.json", optional: false, reloadOnChange: true);
             
             });
     }

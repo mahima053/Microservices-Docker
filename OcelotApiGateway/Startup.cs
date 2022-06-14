@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -20,6 +20,7 @@ namespace OcelotApiGateway
         {
             services.AddControllers();
             services.AddOcelot();
+
             
         }
 
@@ -30,13 +31,22 @@ namespace OcelotApiGateway
             {
                 app.UseDeveloperExceptionPage();
             } 
-            app.UseRouting();
-            app.UseEndpoints(endpoints =>
+         //   app.UseRouting();
+         /*   app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
-            }); 
+            }); */
             app.UseOcelot();
-                 
+      /*      var configuration = new OcelotPipelineConfiguration
+            {
+                PreErrorResponderMiddleware = async (ctx, next) =>
+                {
+                    await next.Invoke();
+                }
+            };
+
+            app.UseOcelot(configuration); */
+
         }
     }
 }

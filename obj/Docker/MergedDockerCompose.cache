@@ -20,8 +20,13 @@ services:
       db:
         condition: service_started
     environment:
+      ACCEPT_EULA: "Y"
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_URLS: http://+:5000
+      DATABASES__SQLSERVER__CONNECTIONSTRING: Server=db;Database=CustomerDb;User=sa;Password=Your_password123
+      MSSQL_PID: Developer
+      SA_PASSWORD: Your_password123
+      User: sa
     image: ocelotapigateway
     ports:
     - published: 5000
@@ -39,8 +44,13 @@ services:
       db:
         condition: service_started
     environment:
+      ACCEPT_EULA: "Y"
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_URLS: http://+:5001
+      DATABASES__SQLSERVER__CONNECTIONSTRING: Server=db;Database=CustomerDb;User=sa;Password=Your_password123
+      MSSQL_PID: Developer
+      SA_PASSWORD: Your_password123
+      User: sa
     ports:
     - published: 5001
       target: 5001
