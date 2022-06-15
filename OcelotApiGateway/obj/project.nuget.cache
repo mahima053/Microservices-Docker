@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "DvQYsj6grX1TDwYGAlaT4xnb+QygGyFCextC2+gEywgvWaS1eR+xqw8jmS04si80P4fbQ32lYYARrfyaz35yeg==",
+  "dgSpecHash": "rnFfxH79zZFN7X6FsIBtuMKl8QsAFjBuhyyuEuSuLGDO0/wFsz7GF4Baj1satWaMz3ZbHYdnz933XUjgKC6CXg==",
   "success": true,
   "projectFilePath": "C:\\Users\\thinksysuser\\source\\repos\\WebApplication1\\OcelotApiGateway\\OcelotApiGateway.csproj",
   "expectedPackageFiles": [
@@ -11,10 +11,10 @@
     "C:\\Users\\thinksysuser\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\thinksysuser\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.3\\microsoft.extensions.dependencyinjection.abstractions.3.1.3.nupkg.sha512",
     "C:\\Users\\thinksysuser\\.nuget\\packages\\microsoft.extensions.diagnosticadapter\\3.1.3\\microsoft.extensions.diagnosticadapter.3.1.3.nupkg.sha512",
-    "C:\\Users\\thinksysuser\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.11.1\\microsoft.visualstudio.azure.containers.tools.targets.1.11.1.nupkg.sha512",
+    "C:\\Users\\thinksysuser\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.15.1\\microsoft.visualstudio.azure.containers.tools.targets.1.15.1.nupkg.sha512",
     "C:\\Users\\thinksysuser\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
     "C:\\Users\\thinksysuser\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
-    "C:\\Users\\thinksysuser\\.nuget\\packages\\ocelot\\16.0.0\\ocelot.16.0.0.nupkg.sha512",
+    "C:\\Users\\thinksysuser\\.nuget\\packages\\ocelot\\16.0.1\\ocelot.16.0.1.nupkg.sha512",
     "C:\\Users\\thinksysuser\\.nuget\\packages\\system.componentmodel.annotations\\4.4.1\\system.componentmodel.annotations.4.4.1.nupkg.sha512",
     "C:\\Users\\thinksysuser\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.0\\system.diagnostics.diagnosticsource.4.7.0.nupkg.sha512"
   ],

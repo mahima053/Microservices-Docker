@@ -89,7 +89,7 @@
           "lib/netcoreapp2.0/Microsoft.Extensions.DiagnosticAdapter.dll": {}
         }
       },
-      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.11.1": {
+      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.15.1": {
         "type": "package",
         "build": {
           "build/Microsoft.VisualStudio.Azure.Containers.Tools.Targets.props": {},
@@ -117,7 +117,7 @@
           "lib/netstandard2.0/Newtonsoft.Json.Bson.dll": {}
         }
       },
-      "Ocelot/16.0.0": {
+      "Ocelot/16.0.1": {
         "type": "package",
         "dependencies": {
           "FluentValidation": "8.6.2",
@@ -315,10 +315,10 @@
         "microsoft.extensions.diagnosticadapter.nuspec"
       ]
     },
-    "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.11.1": {
-      "sha512": "1jHxWlSi6/ryWODk6SUjsZPHk/BdsucxqhIi1szEzwc84e8nvZWF45qRXcT2gWPISJ3Ybbyg2LsNG6yX8r7VuA==",
+    "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.15.1": {
+      "sha512": "dcsF7rjxvMnqtfckpzWYvBsZsJD51yQVHSSgd2EN5/CJ/zQigJrfo313lvAwf0VL9ZOHLnJthuboadjnBAU7Ng==",
       "type": "package",
-      "path": "microsoft.visualstudio.azure.containers.tools.targets/1.11.1",
+      "path": "microsoft.visualstudio.azure.containers.tools.targets/1.15.1",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -346,12 +346,13 @@
         "build/ToolsTarget.props",
         "build/ToolsTarget.targets",
         "icon.png",
-        "microsoft.visualstudio.azure.containers.tools.targets.1.11.1.nupkg.sha512",
+        "microsoft.visualstudio.azure.containers.tools.targets.1.15.1.nupkg.sha512",
         "microsoft.visualstudio.azure.containers.tools.targets.nuspec",
         "tools/Microsoft.VisualStudio.Containers.Tools.Common.dll",
         "tools/Microsoft.VisualStudio.Containers.Tools.Shared.dll",
         "tools/Microsoft.VisualStudio.Containers.Tools.Tasks.dll",
         "tools/Newtonsoft.Json.dll",
+        "tools/System.Security.Principal.Windows.dll",
         "tools/cs/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
         "tools/cs/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
         "tools/cs/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
@@ -445,15 +446,15 @@
         "newtonsoft.json.bson.nuspec"
       ]
     },
-    "Ocelot/16.0.0": {
-      "sha512": "ncHmcjI6hrDp4wef85OtbbTxz9D7+lOHb0sOHFQO/+FshqmWCGziT7P5bgRTOhzYYIvfZZMWXifa874g+5j7Yw==",
+    "Ocelot/16.0.1": {
+      "sha512": "OlhGjx0NWplsW6u+hEkCfhvOxtnVzD6myyccelaQWYHIw6Jfe2U3UVgfDrv0afZueeshrbyJTrBKWQndkSRXNg==",
       "type": "package",
-      "path": "ocelot/16.0.0",
+      "path": "ocelot/16.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netcoreapp3.1/Ocelot.dll",
-        "ocelot.16.0.0.nupkg.sha512",
+        "ocelot.16.0.1.nupkg.sha512",
         "ocelot.nuspec"
       ]
     },
@@ -572,8 +573,8 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.11.1",
-      "Ocelot >= 16.0.0"
+      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.15.1",
+      "Ocelot >= 16.0.1"
     ]
   },
   "packageFolders": {
@@ -617,11 +618,11 @@
         "dependencies": {
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
             "target": "Package",
-            "version": "[1.11.1, )"
+            "version": "[1.15.1, )"
           },
           "Ocelot": {
             "target": "Package",
-            "version": "[16.0.0, )"
+            "version": "[16.0.1, )"
           }
         },
         "imports": [

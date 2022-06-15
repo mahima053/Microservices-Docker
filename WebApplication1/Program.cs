@@ -11,9 +11,6 @@ namespace WebApplication1
     {
         public static void Main(string[] args)
         {
-          //  var root = Directory.GetCurrentDirectory();
-          //  var dotenv = Path.Combine(root, ".env");
-         //   DotEnv.Load(dotenv);
            
             var serviceProvider = CreateServices();
             using (var scope = serviceProvider.CreateScope())

@@ -9,7 +9,7 @@ namespace WebApplication1
 {
     public class CustomerRepository : ICustomerRepository
     {
-        private CustomerContext _customerContext;
+        private readonly CustomerContext _customerContext;
         public CustomerRepository(CustomerContext customerContext)
         {
             _customerContext = customerContext;

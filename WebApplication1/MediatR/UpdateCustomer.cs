@@ -1,19 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using MediatR;
 
 namespace WebApplication1.MediatR
 {
-    public class UpdateCustomerRequest : Customer, IRequest<Guid>
-    {
-    }
+    public class UpdateCustomerRequest : Customer, IRequest<Guid>{}
 
     public class UpdateEmployeeHandler : IRequestHandler<UpdateCustomerRequest, Guid>
     {
-        private ICustomerRepository _cusRepo;
+        private readonly ICustomerRepository _cusRepo;
 
         public UpdateEmployeeHandler(ICustomerRepository customerRepository)
         {

@@ -9,14 +9,9 @@
                     "Port": 5000
                 }
             ],
-            "UpstreamPathTemplate": "/api/customer/{everything}",
+            "UpstreamPathTemplate": "/customer/{everything}",
             "UpstreamHttpMethod": [ "POST", "GET" ]
         }
 
-    ],
-    "GlobalConfiguration": {
-        "BaseUrl": "http://localhost:5000"
-      //  "RequestIdKey": "OcRequestId"
-    }
-
+    ]
 }
